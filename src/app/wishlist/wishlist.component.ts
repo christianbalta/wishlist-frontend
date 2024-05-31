@@ -3,6 +3,8 @@ import {HttpClient} from "@angular/common/http";
 import {NgForOf, NgIf} from "@angular/common";
 import {Button, ButtonDirective} from 'primeng/button';
 import {CardModule} from "primeng/card";
+import {TagModule} from "primeng/tag";
+import {Ripple} from "primeng/ripple";
 
 export interface WishlistItem {
   id: number;
@@ -10,6 +12,7 @@ export interface WishlistItem {
   description: string;
   price: number;
   isReserved: boolean;
+  link: string;
 }
 
 @Component({
@@ -21,6 +24,8 @@ export interface WishlistItem {
     CardModule,
     ButtonDirective,
     NgIf,
+    TagModule,
+    Ripple,
   ],
   templateUrl: './wishlist.component.html',
   styleUrl: './wishlist.component.css'
