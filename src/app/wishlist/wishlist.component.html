@@ -1,0 +1,21 @@
+<h1>Wishlist</h1>
+<div class="wishlist-items-container">
+  <div *ngFor="let item of wishlistItems">
+    <p-card header="{{ item.name }}" [style]="{ width: '260px' }">
+      <p-header>
+        <img src="https://placehold.co/100" alt="Card"/>
+      </p-header>
+      <p>
+        {{ item.description }}
+      </p>
+      <p>
+        <b>{{ item.price }} CHF</b>
+      </p>
+      <p-footer>
+        <p *ngIf="item.isReserved" class="text-success">Reserviert</p>
+        <button *ngIf="!item.isReserved" (click)="reserveItem(item)" pButton type="button" icon="pi pi-check"
+                label="Reservieren"></button>
+      </p-footer>
+    </p-card>
+  </div>
+</div>
