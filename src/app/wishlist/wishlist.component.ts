@@ -41,17 +41,18 @@ export class WishlistComponent implements OnInit {
   }
 
   fetchWishlistItems() {
-    this.http.get<WishlistItem[]>('http://localhost:5054/api/Wishlist')
+    this.http.get<WishlistItem[]>('http://backend:8080/api/wishlist')
       .subscribe(items => this.wishlistItems = items);
   }
 
   reserveItem(item: any) {
-    this.http.put(`http://localhost:5054/api/Wishlist/${item.id}`, {
+    this.http.put(`http://backend:8080/api/wishlist/${item.id}`, {
       isReserved: true,
       name: item.name,
       description: item.description,
       price: item.price,
-      id: item.id
+      id: item.id,
+      link: item.link
     })
       .subscribe(() => {
         this.fetchWishlistItems();
