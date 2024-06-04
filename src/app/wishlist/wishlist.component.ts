@@ -32,7 +32,7 @@ export interface WishlistItem {
 })
 export class WishlistComponent implements OnInit {
   wishlistItems: WishlistItem[] = [];
-  baseUrl = 'http://localhost:5054/api/wishlist';
+  baseUrl = 'http://165.227.158.164:8080/api/wishlist';
 
   constructor(private http: HttpClient) {
   }
