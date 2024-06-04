@@ -39,6 +39,8 @@
         <div>
           <button (click)="reserveItem(item)" *ngIf="!item.isReserved" pButton label="Reservieren"
                   class="p-button-outlined mr-2" icon="pi pi-check"></button>
+          <button (click)="reserveItem(item)" *ngIf="item.isReserved" pButton label="Rückgängig"
+                  class="p-button-outlined mr-2" icon="pi pi-undo"></button>
         </div>
       </ng-template>
     </p-card>

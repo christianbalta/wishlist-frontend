@@ -32,6 +32,7 @@ export interface WishlistItem {
 })
 export class WishlistComponent implements OnInit {
   wishlistItems: WishlistItem[] = [];
+  baseUrl = 'http://localhost:5054/api/wishlist';
 
   constructor(private http: HttpClient) {
   }
@@ -41,13 +42,13 @@ export class WishlistComponent implements OnInit {
   }
 
   fetchWishlistItems() {
-    this.http.get<WishlistItem[]>('http://backend:8080/api/wishlist')
+    this.http.get<WishlistItem[]>(this.baseUrl)
       .subscribe(items => this.wishlistItems = items);
   }
 
   reserveItem(item: any) {
-    this.http.put(`http://backend:8080/api/wishlist/${item.id}`, {
-      isReserved: true,
+    this.http.put(`${this.baseUrl}/${item.id}`, {
+      isReserved: !item.isReserved,
       name: item.name,
       description: item.description,
       price: item.price,
