@@ -32,7 +32,7 @@ export interface WishlistItem {
 })
 export class WishlistComponent implements OnInit {
   wishlistItems: WishlistItem[] = [];
-  baseUrl = 'http://165.227.158.164:8080/api/wishlist';
+  baseUrl = 'https://remindoo.ch/api/wishlist';
 
   constructor(private http: HttpClient) {
   }
