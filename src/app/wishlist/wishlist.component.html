@@ -1,12 +1,12 @@
-<div class="grid grid-nogutter surface-section text-800">
+<div class="grid grid-nogutter surface-section text-800 hero">
   <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
     <section>
-      <span class="block text-6xl font-bold mb-1">Katarina & Mateo</span>
-      <div class="text-6xl text-primary font-bold mb-3">Wunschliste 2. Geburtstag</div>
+      <span class="text-6xl font-bold mb-1" style="color: #FBC2B5">Katarina </span><span class="text-6xl font-bold mb-1" style="color: #A1EEBD">& </span><span class="text-6xl font-bold mb-1" style="color: #7BD3EA">Mateo</span>
+      <div class="text-6xl font-bold mb-3" style="color: #B388EB">Wunschliste 2. Geburtstag</div>
     </section>
   </div>
   <div class="col-12 md:col-6 overflow-hidden">
-    <img src="https://placehold.co/600" alt="Image" class="md:ml-auto block md:h-full">
+    <img src="assets/images/mateo-katarina-image.png" alt="Image" class="md:ml-auto block max-w-full">
   </div>
 </div>
 
@@ -19,13 +19,13 @@
       <ng-template pTemplate="title">
         <div class="flex align-items-center">
           <img
-            src="https://placehold.co/100"
+            [src]="item.imageLink"
             alt="Profile Image"
             class="mr-2"
             style="width: 100px; height: 100px; border-radius: 50%;"
           />
           <div>
-            <div class="text-bold">{{ item.name }}</div>
+            <div class="text-bold" style="color: #A1EEBD">{{ item.name }}</div>
             <p class="item-description">{{ item.description }}</p>
             <p class="item-description"><a [href]="item.link" target="_blank">Zum Produkt</a></p>
             <p class="item-description">Preis: {{ item.price }} CHF</p>

@@ -13,6 +13,7 @@ export interface WishlistItem {
   price: number;
   isReserved: boolean;
   link: string;
+  imageLink: string;
 }
 
 @Component({
@@ -53,7 +54,8 @@ export class WishlistComponent implements OnInit {
       description: item.description,
       price: item.price,
       id: item.id,
-      link: item.link
+      link: item.link,
+      imageLink: item.imageLink
     })
       .subscribe(() => {
         this.fetchWishlistItems();
