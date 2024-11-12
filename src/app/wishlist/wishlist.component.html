@@ -1,17 +1,17 @@
 <div class="grid grid-nogutter surface-section text-800 hero">
   <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
     <section>
-      <span class="text-6xl font-bold mb-1" style="color: #FBC2B5">Katarina </span><span class="text-6xl font-bold mb-1" style="color: #A1EEBD">& </span><span class="text-6xl font-bold mb-1" style="color: #7BD3EA">Mateo</span>
-      <div class="text-6xl font-bold mb-3" style="color: #B388EB">Wunschliste 2. Geburtstag</div>
+      <span class="text-6xl font-bold mb-1" style="color: #D2B48C">Katarina </span><span class="text-6xl font-bold mb-1" style="color: #D2B48C">& </span><span class="text-6xl font-bold mb-1" style="color: #D2B48C">Mateo</span>
+      <div class="text-6xl font-bold mb-3" style="color: #A67C52">Božićne želje</div>
     </section>
   </div>
   <div class="col-12 md:col-6 overflow-hidden">
-    <img src="assets/images/mateo-katarina-image.png" alt="Image" class="md:ml-auto block max-w-full">
+    <img src="assets/images/medo-slika.jpg" alt="Image" class="md:ml-auto block max-w-full">
   </div>
 </div>
 
 <div class="mt-5">
-  <p class="mt-0 mb-4 text-700 line-height-3">Für die Geburtstagsparty müsst ihr nicht unbedingt Geschenke mitbringen. Falls ihr doch etwas schenken möchtet, haltet bitte die Ausgaben gering und sprecht euch bei teureren Geschenken aus der Liste ab. Vielen Dank!</p>
+  <p class="mt-0 mb-4 text-700 line-height-3">Ako želite nešto kupiti, kupite samo 1 dar po obitelji. Hvala vam puno.</p>
 </div>
 <div class="grid mt-5">
   <div *ngFor="let item of wishlistItems" class="col-12 md:col-6 lg:col-3 flex align-items-stretch">
@@ -25,7 +25,7 @@
             style="width: 100px; height: 100px; border-radius: 50%;"
           />
           <div>
-            <div class="text-bold" style="color: #A1EEBD">{{ item.name }}</div>
+            <div class="text-bold" style="color: #365937">{{ item.name }}</div>
             <p class="item-description">{{ item.description }}</p>
             <p class="item-description"><a [href]="item.link" target="_blank">Zum Produkt</a></p>
             <p class="item-description">Preis: {{ item.price }} CHF</p>
